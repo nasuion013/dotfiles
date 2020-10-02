@@ -60,7 +60,7 @@
 	stats = shortlog -sn --all --no-merges
 	hist  = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	ls    = log --pretty=format:"%C(yellow)%h%Cred%d\\ %C(white)%s%Cgreen\\ [%cn]" --decorate
-	today = log --pretty=format:"%Cgreen%cd\\ %C(yellow)%h\\ %Creset%s" --date=format:%T --since=00:00:00 --all --no-merges --author=cebotariserghei@gmail.com
+	today = log --pretty=format:"%Cgreen%cd\\ %C(yellow)%h\\ %Creset%s" --date=format:%T --since=00:00:00 --all --no-merges --author=ion.nasu@muume.com
 	wip   = !git add -A && git commit -m "WIP"    
 	ww    = !git-open    
 [color]
