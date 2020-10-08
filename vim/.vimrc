@@ -108,7 +108,8 @@ Plug 'wincent/ferret'
     nmap <leader>sa <Plug>(FerretAcks)
     nmap <leader>ss <Plug>(FerretAcks)
     nmap <leader>sl <Plug>(FerretLack)
-Plug '~/.fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug '~/.fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
     map <C-p> :Files<cr>
     map <leader>ob :Buffers<cr>
@@ -158,12 +159,16 @@ command! Q quit
 " https://vim.fandom.com/wiki/Selecting_your_pasted_text
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 " Aliases to interact with system clipboard
-nmap <Leader>y "+y
-vmap <Leader>y "+y
+"
+"
+noremap y "+y
+vnoremap y "+y
+
+noremap p "+p
+vnoremap p "+p
+
 nmap <Leader>d "+d
 vmap <Leader>d "+d
-nmap <Leader>p "+p
-vmap <Leader>p "+p
 nmap <Leader>P "+P
 vmap <Leader>P "+P
 
